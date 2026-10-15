@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #0066cc;
+}
+
+.main-info h1 {
+  font-size: 24px;
+}
+
+.role {
+  color: #666;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.section {
+  margin-top: 20px;
+  border-top: 1px solid #eee; /* Тонкая линия-разделитель */
+  padding-top: 15px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Список навыков */
+.skills-list {
+  padding-left: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 6px;
+}
+
+.contact-btn {
+  display: block;
+  text-align: center;
+  background-color: #0066cc;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-btn:hover {
+  background-color: #0052a3;
+}
+
+@media (min-width: 600px) {
+  
+  .card {
+    padding: 35px;
+  }
+
+  /* ставим рядом */
+  .profile-header {
+    flex-direction: row;     /* В одну строчку */
+    text-align: left;        /* Текст выравниваем влево */
+  }
+
+  .avatar {
+    margin-bottom: 0;
+    margin-right: 25px;      /* Отступ справа от фото до текста */
+  }
+
+  .contact-btn {
+    display: inline-block;
+  }
+}
