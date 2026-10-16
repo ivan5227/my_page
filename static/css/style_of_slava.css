@@ -5,28 +5,38 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe UI', sans-serif;
+  background-color: #0d0b18;
+  color: #e2e8f0;
   line-height: 1.6;
   padding: 20px 15px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  max-width: 700px;
-  margin: 0 auto;
+  background-color: #1a152e;
+  border: 2px solid #7c3aed;
+  border-radius: 16px;
+  max-width: 640px;
+  width: 100%;
+  padding: 24px;
+  animation: cardAppear 0.7s ease-out;
 }
 
 .back-link {
   display: inline-block;
-  margin-bottom: 20px;
+  color: #c4b5fd;
   text-decoration: none;
-  color: #0066cc;
   font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  color: #ffffff;
 }
 
 .profile-header {
@@ -34,83 +44,174 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .avatar {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  border: 3px solid #a855f7;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #0066cc;
+  background-color: #2e1065;
+  margin-bottom: 14px;
+  animation: floatAvatar 3s ease-in-out infinite;
 }
 
 .main-info h1 {
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 4px;
 }
 
 .role {
-  color: #666;
+  color: #c4b5fd;
   font-size: 15px;
-  margin-top: 5px;
+  font-style: italic;
 }
 
 .section {
-  margin-top: 20px;
-  border-top: 1px solid #eee; /* Тонкая линия-разделитель */
-  padding-top: 15px;
+  border-top: 1px solid #3b2d63;
+  padding: 16px 0;
 }
 
 .section h2 {
+  color: #d8b4fe;
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #222;
+  margin-bottom: 8px;
 }
 
-/* Список навыков */
+.section p {
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
 .skills-list {
-  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .skills-list li {
-  margin-bottom: 6px;
+  background-color: #2b204c;
+  color: #f1f5f9;
+  border: 1px solid #9333ea;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contacts {
+  border-top: 1px solid #3b2d63;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .contact-btn {
   display: block;
-  text-align: center;
-  background-color: #0066cc;
+  width: 100%;
+  background-color: #7c3aed;
   color: #ffffff;
   text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
   font-weight: bold;
-  margin-top: 10px;
+  font-size: 15px;
 }
 
 .contact-btn:hover {
-  background-color: #0052a3;
+  background-color: #9333ea;
 }
 
-@media (min-width: 600px) {
-  
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.carousel-screen {
+  width: 100%;
+  max-width: 380px;
+  height: 220px;
+  border: 2px solid #7c3aed;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #0d0b18;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-btn {
+  background-color: #2b204c;
+  color: #ffffff;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background-color: #7c3aed;
+}
+
+.carousel-btn:active {
+  background-color: #9333ea;
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatAvatar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 560px) {
   .card {
-    padding: 35px;
+    padding: 32px;
   }
 
-  /* ставим рядом */
   .profile-header {
-    flex-direction: row;     /* В одну строчку */
-    text-align: left;        /* Текст выравниваем влево */
+    flex-direction: row;
+    text-align: left;
   }
 
   .avatar {
     margin-bottom: 0;
-    margin-right: 25px;      /* Отступ справа от фото до текста */
+    margin-right: 22px;
   }
 
   .contact-btn {
     display: inline-block;
+    width: auto;
+    padding: 10px 24px;
   }
 }
