@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Егор Данилин — карточка персонажа</title>
+    <link rel="stylesheet" href="../static/css/style_of_egord.css">
+  </head>
+  <body class="egord-tavern">
+    <div class="egord-page">
+      <nav class="egord-nav">
+        <a href="../index.html">← К нашей команде</a>
+        <p>Личная страница / Егор Данилин</p>
+      </nav>
+
+      <header class="egord-heading">
+        <h1>Егор Данилин</h1>
+        <p>Место встречи — <span id="egord-place">средневековая таверна</span>.</p>
+      </header>
+
+      <main>
+        <article class="egord-card">
+          <div class="egord-portrait">
+            <p class="egord-accent">ПОРТРЕТ ПЕРСОНАЖА</p>
+            <img class="egord-photo" src="../static/img/egord.jpg" alt="Егор Данилин">
+          </div>
+
+          <div class="egord-profile">
+            <h2>Карточка персонажа</h2>
+            <div class="egord-stat">
+              <p>Возраст</p>
+              <p class="egord-value">20</p>
+            </div>
+            <div class="egord-stat">
+              <p>Удачи</p>
+              <p class="egord-value">море</p>
+            </div>
+            <div class="egord-stat">
+              <p>Дача</p>
+              <p class="egord-value">у моря</p>
+            </div>
+
+            <div class="egord-strength">
+              <div>
+                <p>Здоровье</p>
+                <p>Нервы</p>
+                <p>Напитки</p>
+              </div>
+              <span class="egord-brace">}</span>
+              <p class="egord-value">крепкие</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="egord-worlds">
+          <h2>Выбери эпоху</h2>
+          <div class="egord-buttons">
+            <button id="egord-tavern" type="button">Средневековая таверна</button>
+            <button id="egord-vikings" type="button">Чертог викингов</button>
+            <button id="egord-egypt" type="button">Древний Египет</button>
+          </div>
+        </article>
+
+        <article class="egord-toast">
+          <h2>За нашу команду!</h2>
+          <p>Каждое нажатие — ещё один тост в честь совместного приключения.</p>
+          <p class="egord-total">Тостов произнесено: <strong id="egord-count">0</strong></p>
+          <button id="egord-raise" type="button">Поднять кружку</button>
+        </article>
+      </main>
+
+    </div>
+
+    <dialog id="egord-toast-dialog" class="egord-dialog" aria-labelledby="egord-dialog-title">
+      <h2 id="egord-dialog-title">Тост за команду</h2>
+      <p id="egord-dialog-status" class="egord-dialog-status"></p>
+      <button id="egord-dialog-close" type="button">Закрыть</button>
+    </dialog>
+
+    <script src="../static/js/app.js"></script>
+    <script>
+      document.querySelector("#egord-tavern").addEventListener("click", egordChooseTavern);
+      document.querySelector("#egord-vikings").addEventListener("click", egordChooseVikings);
+      document.querySelector("#egord-egypt").addEventListener("click", egordChooseEgypt);
+      document.querySelector("#egord-raise").addEventListener("click", egordRaiseMug);
+      document.querySelector("#egord-dialog-close").addEventListener("click", egordCloseToastDialog);
+    </script>
+  </body>
+</html>

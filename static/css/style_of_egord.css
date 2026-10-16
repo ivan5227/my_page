@@ -1,0 +1,134 @@
+/* Таверна — начальная тема. Переменные наследуются элементами страницы. */
+.egord-tavern {
+  --page: #17120f;
+  --panel: #2b2018;
+  --inset: #211911;
+  --text: #f3e4cc;
+  --muted: #c8b79d;
+  --accent: #efbe76;
+  --border: #96734b;
+  --button: #48311e;
+  --hover: #624326;
+  --radius: 12px;
+  --heading-font: Georgia, serif;
+}
+
+.egord-vikings {
+  --page: #dce5e9;
+  --panel: #f4f7f8;
+  --inset: #e4edf0;
+  --text: #1b303c;
+  --muted: #425c6b;
+  --accent: #204f68;
+  --border: #617d8d;
+  --button: #d4e3e9;
+  --hover: #bdd2dd;
+  --radius: 0px;
+  --heading-font: Arial, sans-serif;
+}
+
+.egord-egypt {
+  --page: #e4c483;
+  --panel: #fff0c8;
+  --inset: #f3dca5;
+  --text: #382911;
+  --muted: #64502b;
+  --accent: #735019;
+  --border: #947133;
+  --button: #ebd08c;
+  --hover: #dbbb70;
+  --radius: 4px;
+  --heading-font: Georgia, serif;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.egord-page { width: 92%; margin: 0 auto; }
+.egord-nav { padding: 24px 0; }
+.egord-nav p { color: var(--muted); font-size: 14px; }
+a { color: var(--accent); }
+.egord-heading { padding: 16px 0 24px; }
+h1, h2 { font-family: var(--heading-font); }
+h1 { font-size: 40px; margin: 16px 0; }
+h2 { font-size: 24px; margin: 0 0 16px; }
+p { margin: 12px 0; }
+.egord-accent { color: var(--accent); font-size: 14px; }
+
+.egord-card {
+  display: grid;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.egord-portrait { padding: 24px; background: var(--inset); border-radius: var(--radius); }
+.egord-portrait > p { color: var(--muted); }
+.egord-photo { display: block; width: 100%; box-sizing: border-box; border: 2px solid var(--border); }
+.egord-profile { padding: 24px; }
+.egord-stat { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-top: 1px solid var(--border); }
+.egord-value { color: var(--accent); font-size: 24px; }
+
+.egord-strength {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.egord-strength > .egord-value { margin: auto 0; }
+
+.egord-brace { font-family: Georgia, serif; font-size: 80px; color: var(--accent); }
+.egord-worlds { padding: 32px 0; }
+.egord-buttons { display: grid; gap: 12px; }
+button {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--button);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+button:hover { background: var(--hover); }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); }
+.egord-toast { padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); }
+.egord-total { color: var(--accent); font-size: 24px; }
+
+@media (min-width: 768px) {
+  .egord-card { grid-template-columns: 1fr 1fr; }
+  .egord-buttons { grid-template-columns: 1fr 1fr 1fr; }
+  h1 { font-size: 48px; }
+}
+
+@media (min-width: 1024px) {
+  .egord-page { width: 880px; }
+}
+
+/* Настоящее HTML-окно: расположением и модальностью управляет браузер. */
+.egord-dialog {
+  box-sizing: border-box;
+  width: 88%;
+  padding: 24px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.egord-dialog-status {
+  color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .egord-dialog { width: 440px; }
+}
