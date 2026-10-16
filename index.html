@@ -3,67 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наша команда</title>
+    <title>Лабораторная №1: Наша команда</title>
 
     <link rel="stylesheet" href="./static/css/style_index.css">
     <script src="./static/js/app.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <h1>Наша команда</h1>
-        <p>Учебный проект по веб-разработке</p>
-        <button id="theme" type="button">Сменить тему</button>
+    <header class="header">
+        <span class="warning-banner">Сделано за ночь и за день перед дедлайном :(</span>
+        <h1>Лаба №1</h1>
+        <p class="subtitle">Наш первый веб-проект на четверых. Решили пока что остановиться на наших карточках.</p>
+
+        <div class="energy-counter">
+            <span>Выпито банок жидкого золота: <strong id="counter">0</strong> шт.</span>
+            <button id="add-energy-btn" type="button">+1 банка</button>
+        </div>
     </header>
 
-    <nav>
-        <a href="#about">О нас</a>
-        <a href="#team">Участники</a>
-        <a href="#hobbies">Увлечения</a>
+    <nav class="nav">
+        <a href="#about">О проекте</a>
+        <a href="#team">Состав команды</a>
+        <a href="#hobbies">Наши интересы</a>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>О нашем проекте</h2>
-            <img src="images/team.jpg" alt="Фотография нашей команды" width="300">
-            <p>Мы студенты, которые делают свой первый сайт. Здесь мы расскажем о себе и своих увлечениях.</p>
-            <button id="more" type="button">Подробнее</button>
-        </section>
+    <main class="content-box">
+        
+        <div id="about" class="paper-block">
+            <h2>У нас было много идей...</h2>
+            <p>Но мы решили сделать одну общую страницу и, само собой, для каждого собственную, чтобы мы могли потыкаться только в своем мире.</p>
+        </div>
 
-        <section id="team">
-            <h2>Наши участники</h2>
-            
-            <article>
-                <h3>Иван Григорьичев</h3>
-                <a href="./template/ivan.html">Перейти на страницу</a>
-            </article>
+        <div id="team">
+            <h2 class="team-title">Герои данных двух дней:</h2>
 
-            <article>
-                <h3>Вячеслав Старченко</h3>
-                <a href="./template/slava.html">Перейти на страницу</a>
-            </article>
+            <div class="team-list">
+                
+                <div class="student-card">
+                    <img src="./static/img/blue_r.jpg" alt="Голубой рейнджер" class="avatar-img"></img>
+                    <h3>Иван Григорьичев</h3>
+                    <p class="student-status">«Я выбрал fast lane. see you at the fast lane»</p>
+                    <p class="job"><strong>Задача:</strong> сначала всех поднять, сделать репу, дальше пропасть и в конце увидеть уже почти готовый результат.</p>
+                    <a href="./template/ivan.html" class="profile-link">Личное дело &rarr;</a>
+                </div>
 
-            <article>
-                <h3>Егор Данилин</h3>
-                <a href="./template/egord.html">Перейти на страницу</a>
-            </article>
+                <div class="student-card">
+                    <img src="./static/img/red_r.jpg" alt="Красный рейнджер" class="avatar-img"></img>
+                    <h3>Вячеслав Старченко</h3>
+                    <p class="student-status">«aki (秋) 🍁 | просто почувствуй»</p>
+                    <p class="job"><strong>Задача:</strong> сделать структуру, поспорить с Иваном, отвечаю за главную страницу, за свою и за все свои деяния.</p>
+                    <a href="./template/slava.html" class="profile-link">Личное дело &rarr;</a>
+                </div>
 
-            <article>
-                <h3>Егор Володичев</h3>
-                <a href="./template/egorv.html">Перейти на страницу</a>
-            </article>
+                <div class="student-card">
+                    <img src="./static/img/green_r.jpg" alt="Зеленый рейнджер" class="avatar-img"></img>
+                    <h3>Егор Данилин</h3>
+                    <p class="student-status">«У Егора не было статуса в tg, так что: "самый чилловый парень с тонной мерча"»</p>
+                    <p class="job"><strong>Задача:</strong> первым познать весь стек js и поведать нам волшебные функции.</p>
+                    <a href="./template/egord.html" class="profile-link">Личное дело &rarr;</a>
+                </div>
 
-        </section>
+                <div class="student-card">
+                    <img src="./static/img/purple_r.jpg" alt="Фиол рейнджер" class="avatar-img"></img>
+                    <h3>Егор Володичев</h3>
+                    <p class="student-status">«Главное доехать до пары...»</p>
+                    <p class="job"><strong>Задача:</strong> самая легкая - в конце посмотреть на всех и сделать что-то свое.</p>
+                    <a href="./template/egorv.html" class="profile-link">Личное дело &rarr;</a>
+                </div>
 
-        <section id="hobbies">
-            <h2>Наши увлечения</h2>
-            <button id="scroll-to-hobbies" type="button">К разделу "Увлечения"</button>
-        </section>
+            </div>
+        </div>
+
+        <div id="hobbies" class="paper-block">
+            <h2>Наши интересы</h2>
+            <p>Трое из нас интересуются разработкой на Go. Трое из нас интересуются машинами. Мы все вчетвером катаемся на сноубордах/горных лыжах. Мы все любим друг над другом подтрунивать :). Все-таки этот сайт это пока что заготовка для чего-то большего...</p>
+        </div>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Наша команда. Все права защищены.</p>
+    <footer class="footer">
+        <p>2026 Наша команда. Проект защищен и надеемся, что будет сдан вовремя.</p>
     </footer>
 
 </body>
