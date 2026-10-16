@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #14281d;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../img/forest.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #14281d;
+  line-height: 1.6;
+  padding: 20px 15px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 2px solid #15803d;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #15803d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #15803d;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.role {
+  color: #15803d;
+  font-size: 15px;
+}
+
+.section {
+  border-top: 1px solid #bbf7d0;
+  padding: 16px 0;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-list li {
+  background-color: #dcfce7;
+  border: 1px solid #4ade80;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.main-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #15803d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: #166534;
+}
+
+.result {
+  min-height: 26px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.result.good {
+  color: #15803d;
+}
+
+.result.bad {
+  color: #b91c1c;
+}
+
+.counter {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.backpack {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.backpack li {
+  border: 1px solid #4ade80;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.backpack li::before {
+  content: "☐ ";
+}
+
+.backpack li:hover {
+  background-color: #f0fdf4;
+}
+
+.backpack li.packed {
+  background-color: #15803d;
+  color: #ffffff;
+}
+
+.backpack li.packed::before {
+  content: "☑ ";
+}
+
+.backpack-status {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.backpack-done {
+  min-height: 24px;
+  font-weight: bold;
+  color: #15803d;
+}
+
+@media (min-width: 560px) {
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .avatar {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
