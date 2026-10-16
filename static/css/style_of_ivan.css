@@ -1,0 +1,346 @@
+:root {
+    --jp-red: #b8302e;        /* Красный торий */
+    --jp-dark-red: #7a1f1c;   /* Тёмный красный */
+    --jp-ink: #1a1a1a;        /* Чернила */
+    --jp-gold: #c9a961;       /* Золото */
+    --jp-paper: #f4ecd8;      /* Цвет васи */
+    --jp-paper-dark: #e8ddc4; /* Тёмная бумага */
+}
+
+.jp-page {
+    background-color: var(--jp-paper);
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(184, 48, 46, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184, 48, 46, 0.05) 0%, transparent 50%);
+    color: var(--jp-ink);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+.jp-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: linear-gradient(180deg, var(--jp-paper-dark) 0%, transparent 100%);
+    border-bottom: 2px solid var(--jp-red);
+    position: relative;
+}
+
+.jp-header h1 {
+    font-size: 2.5em;
+    color: var(--jp-dark-red);
+    margin: 0 0 10px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 0 rgba(201, 169, 97, 0.4);
+}
+
+.jp-subtitle {
+    color: var(--jp-ink);
+    font-style: italic;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* Навигация */
+.jp-nav {
+    text-align: center;
+    padding: 15px;
+    background: rgba(184, 48, 46, 0.05);
+}
+
+.jp-nav a {
+    color: var(--jp-dark-red);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid var(--jp-red);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+.jp-nav a:hover {
+    color: var(--jp-red);
+    letter-spacing: 1px;
+}
+
+/* Основной контент */
+.jp-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.jp-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--jp-gold);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Уголки как в японских свитках */
+.jp-section::before,
+.jp-section::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--jp-red);
+}
+.jp-section::before {
+    top: -2px; left: -2px;
+    border-right: none; border-bottom: none;
+}
+.jp-section::after {
+    bottom: -2px; right: -2px;
+    border-left: none; border-top: none;
+}
+
+.jp-section h2 {
+    color: var(--jp-dark-red);
+    border-bottom: 2px solid var(--jp-gold);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+}
+
+/* Фото профиля */
+.profile-img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--jp-gold);
+    box-shadow: 0 0 0 8px rgba(184, 48, 46, 0.2);
+    margin: 15px auto;
+    display: block;
+}
+
+/* Список увлечений */
+.jp-list {
+    list-style: none;
+    padding: 0;
+}
+.jp-list li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: linear-gradient(90deg, rgba(184, 48, 46, 0.1) 0%, transparent 100%);
+    border-left: 4px solid var(--jp-red);
+    border-radius: 0 4px 4px 0;
+}
+
+/* Скрытый блок */
+.jp-secret {
+    background: rgba(201, 169, 97, 0.15);
+    border: 2px dashed var(--jp-gold);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    animation: fadeIn 0.5s ease;
+}
+.jp-secret h3 {
+    color: var(--jp-red);
+    margin-top: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Кнопки в японском стиле */
+.jp-btn {
+    background: var(--jp-red);
+    color: var(--jp-paper);
+    border: 2px solid var(--jp-dark-red);
+    padding: 12px 28px;
+    font-size: 1em;
+    font-family: inherit;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 3px 3px 0 var(--jp-dark-red);
+}
+.jp-btn:hover {
+    background: var(--jp-dark-red);
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--jp-dark-red);
+}
+.jp-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+.jp-btn-small {
+    padding: 8px 18px;
+    font-size: 0.9em;
+}
+
+/* Секция игры */
+.game-section {
+    background: linear-gradient(135deg, rgba(244, 236, 216, 0.9) 0%, rgba(232, 221, 196, 0.9) 100%);
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+#guess-input {
+    padding: 12px 15px;
+    font-size: 1.2em;
+    border: 2px solid var(--jp-gold);
+    background: var(--jp-paper);
+    color: var(--jp-ink);
+    border-radius: 2px;
+    width: 150px;
+    text-align: center;
+    font-family: inherit;
+}
+
+/* СКРЫВАЕМ СТРЕЛОЧКИ В ПОЛЕ ВВОДА */
+#guess-input::-webkit-outer-spin-button,
+#guess-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#guess-input:focus {
+    outline: none;
+    border-color: var(--jp-red);
+    box-shadow: 0 0 0 3px rgba(184, 48, 46, 0.2);
+}
+
+.game-hint {
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 30px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.hint-cold { color: #4a7ba7; }
+.hint-warm { color: #d97f2f; }
+.hint-hot  { color: var(--jp-red); }
+.hint-win  {
+    color: var(--jp-dark-red);
+    background: rgba(201, 169, 97, 0.3);
+    padding: 20px;
+    font-size: 1.4em;
+    border: 2px solid var(--jp-gold);
+}
+
+.attempts {
+    text-align: center;
+    color: var(--jp-ink);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Футер */
+.jp-footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--jp-ink);
+    border-top: 2px solid var(--jp-red);
+    margin-top: 60px;
+    opacity: 0.8;
+}
+
+/* Тории внизу страницы */
+.torii-gate {
+    position: relative;
+    height: 120px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.torii-top {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 90%; height: 18px;
+    background: var(--jp-red);
+    border-radius: 4px;
+    box-shadow: 0 3px 0 var(--jp-dark-red);
+}
+.torii-bar {
+    position: absolute;
+    top: 40px; left: 50%;
+    transform: translateX(-50%);
+    width: 75%; height: 12px;
+    background: var(--jp-red);
+    box-shadow: 0 3px 0 var(--jp-dark-red);
+}
+.torii-pillar {
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 105px;
+    background: linear-gradient(90deg, var(--jp-dark-red) 0%, var(--jp-red) 50%, var(--jp-dark-red) 100%);
+}
+.torii-pillar.left { left: 20%; }
+.torii-pillar.right { right: 20%; }
+
+/* Тёмная тема (переключается кнопкой) */
+body.warm.jp-page,
+.jp-page.warm {
+    background-color: #2a1f18;
+    color: var(--jp-paper);
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184, 48, 46, 0.15) 0%, transparent 50%);
+}
+.jp-page.warm .jp-section {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--jp-gold);
+}
+.jp-page.warm .jp-header {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    .jp-header h1 { font-size: 1.8em; letter-spacing: 2px; }
+    .jp-section { padding: 20px 15px; }
+    .game-controls { flex-direction: column; align-items: center; }
+    #guess-input { width: 100%; max-width: 200px; }
+    .torii-pillar.left { left: 10%; }
+    .torii-pillar.right { right: 10%; }
+}
+
+.jp-page.warm .jp-subtitle,
+.jp-page.warm .jp-footer {
+    color: var(--jp-paper);
+}
+
+.jp-page.warm .jp-nav a {
+    color: var(--jp-gold);
+    border-bottom-color: var(--jp-gold);
+}
+
+.jp-page.warm .jp-list li {
+    color: var(--jp-paper);
+    background: linear-gradient(90deg, rgba(201, 169, 97, 0.15) 0%, transparent 100%);
+    border-left-color: var(--jp-gold);
+}
+
+.jp-page.warm .hint-win {
+    color: var(--jp-gold);
+    background: rgba(201, 169, 97, 0.2);
+    border-color: var(--jp-gold);
+}
+
+.jp-page.warm .hint-cold { color: #7fb3d9; }
+.jp-page.warm .hint-warm { color: #f0a860; }
+.jp-page.warm .hint-hot  { color: #ff6b6b; }
+
+.jp-page.warm .jp-header h1 {
+    color: var(--jp-gold);
+    text-shadow: 2px 2px 0 rgba(184, 48, 46, 0.6);
+}
