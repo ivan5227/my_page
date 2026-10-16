@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван — Путь самурая кода</title>
+    <link rel="stylesheet" href="../static/css/style_of_ivan.css">
+    <script src="../static/js/ivan.js" defer></script>
+</head>
+<body class="jp-page">
+
+
+    <header class="jp-header">
+        <h1>イヴァン — Иван</h1>
+        <p class="jp-subtitle">Путь самурая кода ・ コードの侍の道</p>
+        <button id="theme" type="button" class="jp-btn">🌸 Сменить тему</button>
+    </header>
+
+    <nav class="jp-nav">
+        <a href="../index.html" class="back-link">&larr; На главную</a>
+    </nav>
+
+    <main class="jp-main">
+
+        <section id="about-me" class="jp-section">
+            <h2>私について ・ Обо мне</h2>
+            <div class="scroll-block">
+                <img src="../static/img/ivan.jpg" alt="Моё фото" width="250" class="profile-img">
+                <p>Меня зовут <strong>Иван</strong>. Я прошёл долгий путь — <strong>13 лет</strong> на льду хоккейной площадки закалили мой характер. Теперь я осваиваю новый лёд — лёд веб-разработки и геймдева.</p>
+                <p>Много путешествовал с друзьями и своей девушкой — видел разные культуры, и именно Япония вдохновила меня на эту страницу.</p>
+                <p>Моя большая мечта — <strong>написать крупную AAA-игру</strong>, которая расскажет миру свою историю.</p>
+            </div>
+        </section>
+
+        <section id="my-hobbies" class="jp-section">
+            <h2>趣味 ・ Увлечения</h2>
+            <ul class="jp-list">
+                <li>🏒 Хоккей (13 лет на льду)</li>
+                <li>✈️ Путешествия с друзьями и девушкой</li>
+                <li>🎮 Разработка игр и геймдизайн</li>
+                <li>🏯 Культура и архитектура Японии</li>
+            </ul>
+
+            <div id="secret-hobby" class="jp-secret" style="display: none;">
+                <h3>秘 ・ Секрет</h3>
+                <p>Однажды я поднялся на высоту 3193 м по горам Японии, чтобы увидеть самый красивый рассвет в моей жизни. Ноги болели неделю, но оно того стоило.</p>
+            </div>
+            <button id="reveal-btn" type="button" class="jp-btn">Раскрыть свиток</button>
+        </section>
+
+        <section id="mini-game" class="jp-section game-section">
+            <h2>数字当て ・ Угадай число</h2>
+            <p>Я загадал целое число от <strong>1 до 100</strong>. Попробуй угадать моё любимое число!</p>
+
+            <div class="game-controls">
+                <input type="number" id="guess-input" min="1" max="100" placeholder="Введи число...">
+                <button id="guess-btn" type="button" class="jp-btn">Проверить</button>
+            </div>
+
+            <p id="game-hint" class="game-hint"></p>
+            <p class="attempts">Попыток: <span id="attempts-count">0</span></p>
+
+            <button id="restart-game" type="button" class="jp-btn jp-btn-small" style="display: none;">Начать заново</button>
+        </section>
+
+    </main>
+
+    <footer class="jp-footer">
+        <p>&copy; 2026 Наша команда ・ 私たちのチーム</p>
+    </footer>
+
+    <!-- Декоративные тории снизу -->
+    <div class="torii-gate">
+        <div class="torii-top"></div>
+        <div class="torii-pillar left"></div>
+        <div class="torii-pillar right"></div>
+        <div class="torii-bar"></div>
+    </div>
+
+</body>
+</html>
